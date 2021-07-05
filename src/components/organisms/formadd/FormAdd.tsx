@@ -39,7 +39,13 @@ const FormAdd = (props: FormAddProps) => {
   const [values, setValues] = useState({
     ensure: 'only-me',
     document: 'dni',
-    family: []
+    family: [],
+    number_document: '',
+    names: '',
+    last_name: '',
+    second_last_name: '',
+    date_of_birth: new Date(),
+    gender: '',
   });
 
   const getData = async () => {
@@ -131,7 +137,7 @@ const FormAdd = (props: FormAddProps) => {
               onChange={date => setValues({ ...values, date_of_birth: date })}
             />
 
-            <RadioGroup
+            <RadioSelect
               value={values.gender}
               data={gender}
               title='Género'
@@ -149,13 +155,6 @@ const FormAdd = (props: FormAddProps) => {
           setValues({ ...values, ensure: value })
         }}
       />
-
-      { addFamily &&
-        <FamilyData
-          data={values.family || []}
-          onChange={data => setValues({ ...values, family: data })}
-        />
-      }
 
       <div className='form-add-relatives__footer'>
         <div>
