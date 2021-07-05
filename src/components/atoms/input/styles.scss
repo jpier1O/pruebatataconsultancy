@@ -1,0 +1,40 @@
+@import '../../../styles/color-palette.scss';
+
+.container-input {
+  margin: 16px 0;
+  width: 100%;
+  position: relative;
+
+  input {
+    width: 100%;
+    border: 1px solid #C5CBE0;
+    border-radius: 4px;
+    height: 54px;
+    outline: none;
+    font-size: 16px;
+    padding: 0 16px;
+
+    &::placeholder {
+      color: #A3ABCC;
+    }
+  }
+
+  span {
+    display: none;
+  }
+
+  &.error {
+    input {
+      border-color: $primary-color;
+    }
+
+    span {
+      display: block;
+      color: $primary-color;
+      font-size: 12px;
+      position: absolute;
+      right: 0;
+      bottom: -14px;
+    }
+  }
+}

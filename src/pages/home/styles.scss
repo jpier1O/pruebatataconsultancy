@@ -1,0 +1,14 @@
+.container-home {
+  &__body {
+    padding: 52px 32px;
+    max-width: 352px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 992px) {
+    &__body {
+      margin-top: 96px;
+      padding: 0;
+    }
+  }
+}
