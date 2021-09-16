@@ -18,7 +18,7 @@ export type FormAddProps = {
 };
 
 const gender = [
-  { name: 'Masculino', id: 'M' },
+  { name: 'Masculinooo', id: 'M' },
   { name: 'Femenino', id: 'F' }
 ];
 
